@@ -33,6 +33,7 @@ The first step in this project was verifying the cache side-channel. On any syst
 We ran this program `100` times, plotting the distribution of access 1 latencies with access 2 latencies. The graph is below:
 
 ![Verifying Cache Side Channel Chart](Verifying-Cache-Side-Channel.png)
+
 We see that it is easy to tell if a variable was not in the cache before access (~250 cycles), or if it was already present before access (~75 cycles). As a result, this gives us confidence to move on to the next subgoal of this project, which is using this side-channel to leak information.
 
 Here are some implementation details from this program:
